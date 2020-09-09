@@ -19,24 +19,25 @@
             <div class="header-top-bar">
               <div class="container">
                 <a href="#" class="schnelle-lieferung">
-                  [SVG]
-                  Schnelle Lieferung
+                  <svg class="icon">
+                    <use xlink:href="./img/icons/sprite.svg#rocket"></use>
+                  </svg>
+                  <span>Schnelle Lieferung</span>
                 </a>
-                <div class="trusted-shops">
-                  [Stars]
-                  <a href="#">(4.82) Trusted Shops</span>
-                  [PNG]
-                </div>
+                <a href="#" class="trusted-shops">
+                  <img src="img/flags/de.png" alt="Flag of Germany">
+                  <span>(4.82) Trusted Shops</span>
+                  <img src="./img/trusted.png">
+                </a>
                 <a href="#" class="faire-preise">
-                  [SVG]
-                  Faire Preise
+                  <svg class="icon">
+                    <use xlink:href="./img/icons/sprite.svg#trending-down"></use>
+                  </svg>
+                  <span>Faire Preise</span>
                 </a>
                 <div class="header-dropdowns">
                   <div class="select-language">
-                    <span>
-                      [Flag]
-                      [Down arrow]
-                    </span>
+                    <img src="img/flags/de.png" alt="Flag of Germany">
                     <select>
                       <option value="de" selected="selected">
                         Deutsch
@@ -63,9 +64,20 @@
                         Italien
                       </option>
                     </select>
-                    </div>
+                    <svg class="icon">
+                      <use xlink:href="./img/icons/sprite.svg#chevron-down-outline"></use>
+                    </svg>
+                  </div>
                   <div class="service-hilfe">
-                    <button>[svg] Service/Hilfe</button>
+                    <button>
+                      <svg class="icon">
+                        <use xlink:href="./img/icons/sprite.svg#help-circle"></use>
+                      </svg> 
+                      <span>Service/Hilfe</span>
+                      <svg class="icon">
+                        <use xlink:href="./img/icons/sprite.svg#chevron-down-outline"></use>
+                      </svg>
+                    </button>
                     <ul>
                       <li>
                         <a href="#" title="Cookie Preferences">
@@ -124,7 +136,36 @@
             </div>
             <div class="header-content">
               <div class="container">
-                Header
+                <form>
+                  <img src="img/logo.svg" alt="Logo of KoRo Drogerie">
+                  <div class="input-container">
+                    <input type="search" placeholder="" />
+                    <svg class="icon">
+                      <use xlink:href="./img/icons/sprite.svg#search-outline"></use>
+                    </svg>
+                  </div>
+                  <a href="#">
+                    <svg class="icon">
+                      <use xlink:href="./img/icons/sprite.svg#heart-outline"></use>
+                    </svg>
+                  </a>
+                  <a href="#">
+                    <svg class="icon">
+                      <use xlink:href="./img/icons/sprite.svg#person-outline"></use>
+                    </svg>
+                  </a>
+                  <a href="#">
+                    <svg class="icon">
+                      <use xlink:href="./img/icons/sprite.svg#cart-outline"></use>
+                    </svg>
+                    <span>0,00 €</span>
+                  </a>
+                </form>
+                <nav>
+                  <ul>
+                    <li><a href="#" >Superfoods</a></li>
+                  </ul>
+                </nav>
               </div>
             </div>
         </header>
@@ -134,3 +175,44 @@
     </body>
 
 </html>
+
+
+
+<!--
+<svg class="icon">
+  <use xlink:href="#help-circle"></use>
+</svg>
+
+<svg class="icon">
+  <use xlink:href="#person-outline"></use>
+</svg>
+
+<svg class="icon">
+  <use xlink:href="#cart-outline"></use>
+</svg>
+
+<svg class="icon">
+  <use xlink:href="#heart-outline"></use>
+</svg>
+
+<svg class="icon">
+  <use xlink:href="#chevron-down-outline"></use>
+</svg>
+
+<svg class="icon">
+  <use xlink:href="#trending-down"></use>
+</svg>
+
+<svg class="icon">
+  <use xlink:href="#rocket"></use>
+</svg>
+
+<svg class="icon">
+  <use xlink:href="#search-outline"></use>
+</svg>
+
+<svg class="icon">
+  <use xlink:href="#logo"></use>
+</svg>
+
+-->

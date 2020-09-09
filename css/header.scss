@@ -1,4 +1,5 @@
 @import "./variables";
+@import "./mixins";
 
 /******** Header ********/
 header {
@@ -6,24 +7,197 @@ header {
   /* Top bar of the header*/
   .header-top-bar {
     background-color: $lightGray;
+    padding: .5rem 0;
 
     .container {
-      display: flex;
-      align-items: center;
+      @include center-vertically;
       justify-content: space-between;
 
+      > a {
+        color: $gray;
+        font-size: 1.3rem;
+        text-decoration: none;
+        transition: all .2s;
+      }
 
-      /**select**/
-      // background: none;
-      // color: transparent;
-      // border: none;
-      // outline: none;
+      .schnelle-lieferung,
+      .faire-preise {
+        @include center-vertically;
+      
+        svg {
+          width: 1.6rem;
+          height: 1.6rem;
+          margin-right: .6rem;
+
+          * {
+            fill: $gray;
+            transition: fill .2s;
+          }
+        }
+
+        &:hover {
+          color: $darkGray;
+
+          svg {
+            * {
+              fill: $darkGray;
+            }
+          }
+        }
+      }
+
+      .trusted-shops {
+        @include center-vertically;
+
+        &:hover {
+          color: $darkGray;
+        }
+
+        img {
+          width: 2rem;
+          height: 2rem;
+          margin: 0 .32rem;
+        }
+
+        span {
+          margin: 0 .32rem;
+        }
+      }
+
+
+      .header-dropdowns {
+        @include center-vertically;
+
+        .select-language {
+          position: relative;
+          width: 3.5rem;
+          margin-right: 1rem;
+
+          img {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 1.4rem;
+          }
+
+          select {
+            width: 100%;
+            background: none;
+            color: transparent;
+            border: none;
+            outline: none;
+            position: relative;
+            z-index: 10;
+
+            option {
+              color: $darkGray; 
+            }
+          }
+
+          svg {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 1.6rem;
+  
+            path {
+              fill: $gray;
+              transition: fill .2s;
+            }
+          }
+  
+          &:hover {
+            svg {
+              * {
+                fill: $darkGray;
+              }
+            }
+          }
+        }
+
+        .service-hilfe {
+          position: relative;
+
+          button {
+            background: none;
+            border: none;
+            display: flex;
+            align-items: center;
+            color: $gray;
+            font-size: 1.2rem;
+
+            &:focus {
+              outline: none;
+            }
+
+            span {
+              margin: 0 .3rem;
+            }
+
+            svg {
+              width: 2rem;
+              height: 2rem;
+    
+              * {
+                fill: $gray;
+                transition: fill .2s;
+              }
+            }
+    
+            &:hover {
+              color: $darkGray;
+    
+              svg {
+                * {
+                  fill: $darkGray;
+                }
+              }
+            }
+          }
+          
+          ul {
+            position: absolute;
+            top: 2rem;
+            background-color: $white;
+            list-style: none;
+            display: none;
+
+            &.dropdown-visible {
+              display: block;
+            }
+
+            li {
+              padding: .6rem .9rem;
+              border-radius: 2px;
+              a {
+                text-decoration: none;
+                font-size: 1.3rem;
+                color: $gray;
+              }
+
+              &:hover {
+                background-color: $lightGray;
+
+                a {
+                  color: $darkGray;
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 
   /* Main content of the header */
-
   .header-content {
-    height: 120px;
+    
+    .container {
+      form {
+        display: flex;
+      }
+    }
   }
 }

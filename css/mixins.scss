@@ -1,0 +1,6 @@
+/******* Mixins ********/
+
+@mixin center-vertically {
+  display: flex;
+  align-items: center;
+}

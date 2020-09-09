@@ -1,4 +1,5 @@
 /******** Variables ********/
+/******* Mixins ********/
 /******** Header ********/
 header {
   /* Top bar of the header*/
@@ -7,6 +8,7 @@ header {
 
 header .header-top-bar {
   background-color: #f3f3f3;
+  padding: .5rem 0;
 }
 
 header .header-top-bar .container {
@@ -19,10 +21,208 @@ header .header-top-bar .container {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  /**select**/
 }
 
-header .header-content {
-  height: 120px;
+header .header-top-bar .container > a {
+  color: #888;
+  font-size: 1.3rem;
+  text-decoration: none;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+header .header-top-bar .container .schnelle-lieferung,
+header .header-top-bar .container .faire-preise {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .header-top-bar .container .schnelle-lieferung svg,
+header .header-top-bar .container .faire-preise svg {
+  width: 1.6rem;
+  height: 1.6rem;
+  margin-right: .6rem;
+}
+
+header .header-top-bar .container .schnelle-lieferung svg *,
+header .header-top-bar .container .faire-preise svg * {
+  fill: #888;
+  -webkit-transition: fill .2s;
+  transition: fill .2s;
+}
+
+header .header-top-bar .container .schnelle-lieferung:hover,
+header .header-top-bar .container .faire-preise:hover {
+  color: #3a3a3a;
+}
+
+header .header-top-bar .container .schnelle-lieferung:hover svg *,
+header .header-top-bar .container .faire-preise:hover svg * {
+  fill: #3a3a3a;
+}
+
+header .header-top-bar .container .trusted-shops {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .header-top-bar .container .trusted-shops:hover {
+  color: #3a3a3a;
+}
+
+header .header-top-bar .container .trusted-shops img {
+  width: 2rem;
+  height: 2rem;
+  margin: 0 .32rem;
+}
+
+header .header-top-bar .container .trusted-shops span {
+  margin: 0 .32rem;
+}
+
+header .header-top-bar .container .header-dropdowns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .header-top-bar .container .header-dropdowns .select-language {
+  position: relative;
+  width: 3.5rem;
+  margin-right: 1rem;
+}
+
+header .header-top-bar .container .header-dropdowns .select-language img {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 1.4rem;
+}
+
+header .header-top-bar .container .header-dropdowns .select-language select {
+  width: 100%;
+  background: none;
+  color: transparent;
+  border: none;
+  outline: none;
+  position: relative;
+  z-index: 10;
+}
+
+header .header-top-bar .container .header-dropdowns .select-language select option {
+  color: #3a3a3a;
+}
+
+header .header-top-bar .container .header-dropdowns .select-language svg {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 1.6rem;
+}
+
+header .header-top-bar .container .header-dropdowns .select-language svg path {
+  fill: #888;
+  -webkit-transition: fill .2s;
+  transition: fill .2s;
+}
+
+header .header-top-bar .container .header-dropdowns .select-language:hover svg * {
+  fill: #3a3a3a;
+}
+
+header .header-top-bar .container .header-dropdowns .service-hilfe {
+  position: relative;
+}
+
+header .header-top-bar .container .header-dropdowns .service-hilfe button {
+  background: none;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #888;
+  font-size: 1.2rem;
+}
+
+header .header-top-bar .container .header-dropdowns .service-hilfe button:focus {
+  outline: none;
+}
+
+header .header-top-bar .container .header-dropdowns .service-hilfe button span {
+  margin: 0 .3rem;
+}
+
+header .header-top-bar .container .header-dropdowns .service-hilfe button svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+header .header-top-bar .container .header-dropdowns .service-hilfe button svg * {
+  fill: #888;
+  -webkit-transition: fill .2s;
+  transition: fill .2s;
+}
+
+header .header-top-bar .container .header-dropdowns .service-hilfe button:hover {
+  color: #3a3a3a;
+}
+
+header .header-top-bar .container .header-dropdowns .service-hilfe button:hover svg * {
+  fill: #3a3a3a;
+}
+
+header .header-top-bar .container .header-dropdowns .service-hilfe ul {
+  position: absolute;
+  top: 2rem;
+  background-color: #fff;
+  list-style: none;
+  display: none;
+}
+
+header .header-top-bar .container .header-dropdowns .service-hilfe ul.dropdown-visible {
+  display: block;
+}
+
+header .header-top-bar .container .header-dropdowns .service-hilfe ul li {
+  padding: .6rem .9rem;
+  border-radius: 2px;
+}
+
+header .header-top-bar .container .header-dropdowns .service-hilfe ul li a {
+  text-decoration: none;
+  font-size: 1.3rem;
+  color: #888;
+}
+
+header .header-top-bar .container .header-dropdowns .service-hilfe ul li:hover {
+  background-color: #f3f3f3;
+}
+
+header .header-top-bar .container .header-dropdowns .service-hilfe ul li:hover a {
+  color: #3a3a3a;
+}
+
+header .header-content .container form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 /*# sourceMappingURL=header.css.map */

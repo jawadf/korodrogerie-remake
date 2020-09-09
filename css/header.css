@@ -1,0 +1,28 @@
+/******** Variables ********/
+/******** Header ********/
+header {
+  /* Top bar of the header*/
+  /* Main content of the header */
+}
+
+header .header-top-bar {
+  background-color: #f3f3f3;
+}
+
+header .header-top-bar .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  /**select**/
+}
+
+header .header-content {
+  height: 120px;
+}
+/*# sourceMappingURL=header.css.map */

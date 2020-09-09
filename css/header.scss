@@ -1,0 +1,29 @@
+@import "./variables";
+
+/******** Header ********/
+header {
+
+  /* Top bar of the header*/
+  .header-top-bar {
+    background-color: $lightGray;
+
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+
+      /**select**/
+      // background: none;
+      // color: transparent;
+      // border: none;
+      // outline: none;
+    }
+  }
+
+  /* Main content of the header */
+
+  .header-content {
+    height: 120px;
+  }
+}

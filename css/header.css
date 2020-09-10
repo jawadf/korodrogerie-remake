@@ -2,6 +2,7 @@
 /******* Mixins ********/
 /******** Header ********/
 header {
+  border-bottom: 0.1rem solid rgba(136, 136, 136, 0.2);
   /* Top bar of the header*/
   /* Main content of the header */
 }
@@ -41,28 +42,14 @@ header .header-top-bar .container .faire-preise {
           align-items: center;
 }
 
-header .header-top-bar .container .schnelle-lieferung svg,
-header .header-top-bar .container .faire-preise svg {
-  width: 1.6rem;
-  height: 1.6rem;
-  margin-right: .6rem;
-}
-
-header .header-top-bar .container .schnelle-lieferung svg *,
-header .header-top-bar .container .faire-preise svg * {
-  fill: #888;
-  -webkit-transition: fill .2s;
-  transition: fill .2s;
+header .header-top-bar .container .schnelle-lieferung span,
+header .header-top-bar .container .faire-preise span {
+  margin-left: .3rem;
 }
 
 header .header-top-bar .container .schnelle-lieferung:hover,
 header .header-top-bar .container .faire-preise:hover {
   color: #3a3a3a;
-}
-
-header .header-top-bar .container .schnelle-lieferung:hover svg *,
-header .header-top-bar .container .faire-preise:hover svg * {
-  fill: #3a3a3a;
 }
 
 header .header-top-bar .container .trusted-shops {
@@ -88,6 +75,15 @@ header .header-top-bar .container .trusted-shops span {
   margin: 0 .32rem;
 }
 
+header .header-top-bar .container .trusted-shops aside {
+  line-height: 1;
+}
+
+header .header-top-bar .container .trusted-shops aside ion-icon {
+  color: #f4c20d;
+  font-size: 1.3rem;
+}
+
 header .header-top-bar .container .header-dropdowns {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -101,6 +97,7 @@ header .header-top-bar .container .header-dropdowns .select-language {
   position: relative;
   width: 3.5rem;
   margin-right: 1rem;
+  cursor: pointer;
 }
 
 header .header-top-bar .container .header-dropdowns .select-language img {
@@ -126,23 +123,19 @@ header .header-top-bar .container .header-dropdowns .select-language select opti
   color: #3a3a3a;
 }
 
-header .header-top-bar .container .header-dropdowns .select-language svg {
+header .header-top-bar .container .header-dropdowns .select-language ion-icon {
   position: absolute;
   right: 0;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   width: 1.6rem;
+  font-size: 1.3rem;
+  color: #888;
 }
 
-header .header-top-bar .container .header-dropdowns .select-language svg path {
-  fill: #888;
-  -webkit-transition: fill .2s;
-  transition: fill .2s;
-}
-
-header .header-top-bar .container .header-dropdowns .select-language:hover svg * {
-  fill: #3a3a3a;
+header .header-top-bar .container .header-dropdowns .select-language ion-icon:hover {
+  color: #3a3a3a;
 }
 
 header .header-top-bar .container .header-dropdowns .service-hilfe {
@@ -220,9 +213,145 @@ header .header-top-bar .container .header-dropdowns .service-hilfe ul li:hover a
   color: #3a3a3a;
 }
 
+header .header-content {
+  padding: 2rem 0;
+}
+
 header .header-content .container form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .header-content .container form > img {
+  width: 4.8rem;
+  margin-right: 3rem;
+}
+
+header .header-content .container form .input-container {
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-right: 3rem;
+}
+
+header .header-content .container form .input-container:hover input {
+  -webkit-box-shadow: 0 0 0.8rem rgba(58, 58, 58, 0.2);
+          box-shadow: 0 0 0.8rem rgba(58, 58, 58, 0.2);
+  border: 0.1rem solid #888;
+}
+
+header .header-content .container form .input-container input {
+  width: 100%;
+  padding: 1.2rem;
+  padding-left: 4.6rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #f3f3f3;
+  color: #3a3a3a;
+}
+
+header .header-content .container form .input-container input::-webkit-input-placeholder {
+  color: #888;
+}
+
+header .header-content .container form .input-container input:-ms-input-placeholder {
+  color: #888;
+}
+
+header .header-content .container form .input-container input::-ms-input-placeholder {
+  color: #888;
+}
+
+header .header-content .container form .input-container input::placeholder {
+  color: #888;
+}
+
+header .header-content .container form .input-container input::-webkit-input-placeholder {
+  color: #888;
+}
+
+header .header-content .container form .input-container input::-moz-placeholder {
+  color: #888;
+}
+
+header .header-content .container form .input-container input:focus {
+  outline: none;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 0.8rem rgba(58, 58, 58, 0.2);
+          box-shadow: 0 0 0.8rem rgba(58, 58, 58, 0.2);
+  border: 0.1rem solid #888;
+}
+
+header .header-content .container form .input-container button {
+  position: absolute;
+  left: 1.2rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: none;
+  border: none;
+  text-decoration: none;
+  font-size: 2.3rem;
+  line-height: 1;
+}
+
+header .header-content .container form .input-container button:focus {
+  outline: none;
+}
+
+header .header-content .container form > a {
+  text-decoration: none;
+  color: #3a3a3a;
+  font-size: 2.7rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .header-content .container form > a:not(:last-child) {
+  margin-right: 1rem;
+}
+
+header .header-content .container form > a span {
+  font-size: 1.5rem;
+  margin-left: .8rem;
+}
+
+header .header-content .container nav {
+  margin-top: 2rem;
+}
+
+header .header-content .container nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+}
+
+header .header-content .container nav ul li {
+  margin-right: 2rem;
+}
+
+header .header-content .container nav ul li a {
+  text-decoration: none;
+  color: #3a3a3a;
+  font-size: 1.3rem;
+  padding-bottom: 1rem;
+  border-bottom: .2rem solid transparent;
+}
+
+header .header-content .container nav ul li:hover a {
+  border-color: #3a3a3a;
 }
 /*# sourceMappingURL=header.css.map */

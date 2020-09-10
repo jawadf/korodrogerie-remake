@@ -3,6 +3,7 @@
 
 /******** Header ********/
 header {
+  border-bottom: .1rem solid rgba($gray, .2);
 
   /* Top bar of the header*/
   .header-top-bar {
@@ -23,26 +24,13 @@ header {
       .schnelle-lieferung,
       .faire-preise {
         @include center-vertically;
-      
-        svg {
-          width: 1.6rem;
-          height: 1.6rem;
-          margin-right: .6rem;
 
-          * {
-            fill: $gray;
-            transition: fill .2s;
-          }
+        span {
+          margin-left: .3rem;
         }
 
         &:hover {
           color: $darkGray;
-
-          svg {
-            * {
-              fill: $darkGray;
-            }
-          }
         }
       }
 
@@ -62,6 +50,15 @@ header {
         span {
           margin: 0 .32rem;
         }
+
+        aside {
+          line-height: 1;
+
+          ion-icon {
+            color: $yellow;
+            font-size: 1.3rem;
+          }
+        }
       }
 
 
@@ -72,6 +69,7 @@ header {
           position: relative;
           width: 3.5rem;
           margin-right: 1rem;
+          cursor: pointer;
 
           img {
             position: absolute;
@@ -95,24 +93,17 @@ header {
             }
           }
 
-          svg {
+          ion-icon {
             position: absolute;
             right: 0;
             top: 50%;
             transform: translateY(-50%);
             width: 1.6rem;
-  
-            path {
-              fill: $gray;
-              transition: fill .2s;
-            }
-          }
-  
-          &:hover {
-            svg {
-              * {
-                fill: $darkGray;
-              }
+            font-size: 1.3rem;
+            color: $gray;
+
+            &:hover {
+              color: $darkGray;
             }
           }
         }
@@ -193,10 +184,119 @@ header {
 
   /* Main content of the header */
   .header-content {
-    
+    padding: 2rem 0;
+
     .container {
       form {
-        display: flex;
+        @include center-vertically;
+
+        > img {
+          width: 4.8rem;
+          margin-right: 3rem;
+        }
+
+        .input-container {
+          position: relative;
+          flex: 1;
+          margin-right: 3rem;
+
+          &:hover {
+            input {
+              box-shadow: 0 0 .8rem rgba($darkGray, .2);
+              border: .1rem solid $gray;
+            }
+          }
+
+          
+          input {
+            width: 100%;
+            padding: 1.2rem;
+            padding-left: 4.6rem;
+            border: none;
+            border-radius: 5px;
+            background-color: $lightGray;
+            color: $darkGray;
+
+            &::placeholder {
+              color: $gray;
+            }
+
+            &::-webkit-input-placeholder {
+              color: $gray;
+            }
+
+            &::-moz-placeholder {
+              color: $gray;
+            }
+
+            &:focus {
+              outline: none;
+              background-color: $white;
+              box-shadow: 0 0 .8rem rgba($darkGray, .2);
+              border: .1rem solid $gray;
+            }
+          }
+
+          button {
+            position: absolute;
+            left: 1.2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            text-decoration: none;
+            font-size: 2.3rem;
+            line-height: 1;
+
+            &:focus {
+              outline: none;
+            }
+
+          }
+
+        }
+
+        > a {
+          text-decoration: none;
+          color: $darkGray;
+          font-size: 2.7rem;
+          @include center-vertically;
+
+          &:not(:last-child) {
+            margin-right: 1rem;
+          }
+
+          span {
+            font-size: 1.5rem;
+            margin-left: .8rem;
+          }
+        }
+      }
+
+      nav {
+        margin-top: 2rem;
+        ul {
+          @include center-vertically;
+          list-style: none;
+          
+          li {
+            margin-right: 2rem;
+
+            a {
+              text-decoration: none;
+              color: $darkGray;
+              font-size: 1.3rem;
+              padding-bottom: 1rem;
+              border-bottom: .2rem solid transparent;
+            }
+
+            &:hover {
+              a {
+                border-color: $darkGray;
+              }
+            }
+          }
+        }
       }
     }
   }
